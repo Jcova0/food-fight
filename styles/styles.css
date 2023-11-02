@@ -1,4 +1,4 @@
-body {
+.default-body {
     background: url('../img/background.gif') no-repeat center center/cover;
     height: 100vh;
     margin: 0;
@@ -16,8 +16,9 @@ body {
     max-width: 1000px; /* Set a maximum width for the container */
     width: 100%; /* Ensure the container takes full width inside body */
     text-align: center; /* Center the content inside the container */
+    color: red;
   }
-  
+
   .header {
     display: flex;
     flex-direction: column;
@@ -25,18 +26,19 @@ body {
   }
   .split-title {
     font-size: 48px; /* Adjust the font size as needed */
-    background: linear-gradient(to bottom, #d7e008 50%, #ac0000 50%); /* Red to Yellow gradient */
+    background: linear-gradient(#d7e008, #ac0000); /* Red to Yellow gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   .title-2 {
-    color:white;
+   color:#e6bb46e3;
+    
   }
   .form-group {
-    color: white;
+    color:#e6bb46e3;
   }
   .recents {
-    color: white;
+    color:#e6bb46e3;
   }
   
   .navbar {
@@ -67,3 +69,126 @@ body {
     margin: 0 auto; /* Center the input fields */
     margin-bottom: 10px; /* Add some space between input fields */
   }
+  
+  .body-leaderboard{
+    
+    /* make the background remain in the window */
+    background: url('../img/background.gif');
+    
+    /* Set a specified height, or the minimum height for the background image */
+    min-height: 500px;
+    
+    /* Set background image to fixed (don't scroll along with the page) */
+    background-attachment: fixed;
+    
+    /* Center the background image */
+    background-position: center;
+    
+    /* Set the background image to no repeat */
+    background-repeat: no-repeat;
+    
+    /* Scale the background image to be as large as possible */
+    background-size: cover;
+    
+    flex-direction: row;
+    height: 100vh;
+    margin: 0;
+    padding: 0.3%;
+    display: flex;
+    flex-flow: column;
+  }
+  
+    .filter{
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      padding: 3%;
+      background-color: #27251fa1;
+      height: 300px;
+      border-radius: 15px;
+    }
+  
+  .main-leaderboard{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.post{
+  background-color: #69694a7e;
+  color: rgb(255, 166, 0);
+  border-radius: 15px;
+  
+  margin: 1%;
+  width: 30%;
+  min-width: 200px;
+  padding-top: 0.8%;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  
+  &.grow{
+    transition: all .2s ease-in-out;
+
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+}
+
+.post-info{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  padding: 0.6%;
+  align-items: center;
+  justify-content: center;
+}
+.post-control{
+  padding-top: 1.5%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: auto; */
+
+  border-top: solid;
+  border-color: #ff3c0088;
+
+  
+}
+
+.vote-buttons{  
+  display: flex;
+  justify-content: space-between;
+  /* align-self: auto; */
+  width: 100%;
+  order: -1;
+}
+
+.comment-button{
+  padding-top: 1%;
+  padding-bottom: 3%;
+  order: 2;
+  align-self: center;
+}
+
+.rating{
+  color: rgba(43, 255, 0, 0.692);
+  font-weight: bold;
+  padding: 0.5%;
+}
+
+img {
+  border-style: solid;
+  border-color: #ff3c0088;
+  border-width: 0.2%;
+  border-radius: 15px;
+
+  width: 90%;
+  height: 60%;
+  object-fit: cover;
+}
+  

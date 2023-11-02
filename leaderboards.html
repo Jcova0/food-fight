@@ -8,21 +8,23 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
-<body>
-<div class="text-center">
-    <div class="container">
-        <h1 class="title-2">Leaderboards</h1>
-        <label class="title-2" for="filterSelect">Filter By:</label>
-        <select id="filterSelect">
-            <option value="ratings">Highest Ratings</option>
-            <option value="comments">Most Comments</option>
-        </select>
-        <div id="leaderboard"></div>
+<body class="body-leaderboard">
+    <div class="filter">
+        <div>
+            <h1 class="split-title">Leaderboard</h1>
+            <label class="split-title" for="filterSelect">Filter By:</label>
+            <select id="filterSelect">
+                <option value="ratings">Highest Ratings</option>
+                <option value="comments">Most Comments</option>
+            </select>
+        </div>
     </div>
-</div>
+    <div class="main-leaderboard" id="leaderboard"></div>
 
+</body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
     <script src="scripts/leaderboards.js"></script>
-</body>
+    <script src="scripts/votehandler.js"></script>
+
 </html>

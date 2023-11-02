@@ -32,7 +32,7 @@ document.getElementById('createAccountForm').addEventListener('submit', function
         password: password
     };
 
-    fetch('/data', {
+    fetch('http://76.174.52.44:5000/createUser', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

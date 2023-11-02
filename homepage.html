@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- <link rel="stylesheet" href="styles/styles.css"> -->
+
+    <title>Food Fights!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            background: url('img/background.gif') no-repeat center center/cover;
+        }
+
+        h1 {
+            font-style: italic;
+            /* color: #d7e008; */
+            font-size: 100px;
+            background: linear-gradient(#d7e008, #ac0000); /* Red to Yellow gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .message {
+            font-style: italic;
+            margin-top: 20px;
+            color: #ac0000 ;
+            font-size: 25px;
+        }
+
+        .options {
+            margin-top: 20px;
+            display: flex;
+        }
+
+        .options button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #27251F;
+            color: #db9929;
+            transition: all 0.3s ease; 
+        }
+
+        .options button:hover {
+    transform: scale(1.1); 
+        }
+
+    </style>
+     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+
+<body>
+    <h1>Food Fights!</h1>
+    <div class="message">
+        <p>Welcome to the battle between foods, what would you like to do?</p>
+    </div>
+    <div class="options">
+        <button onclick="redirectToLogin()">Continue Fighting</button>
+        <button onclick="redirectToCreateAccount()">Join the Battle</button>
+    </div>
+
+    <script>
+        function redirectToLogin() {
+            window.location.href = "login.html"; 
+        }
+
+        function redirectToCreateAccount() {
+            window.location.href = "createAccount.html"; 
+        }
+    </script>
+</body>
+
+</html>
